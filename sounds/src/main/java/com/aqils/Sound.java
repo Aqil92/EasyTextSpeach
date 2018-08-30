@@ -76,9 +76,10 @@ public class Sound implements TextToSpeech.OnInitListener {
     private final LinkedHashMap<String, String> samples = new LinkedHashMap<String, String>();
     private final ArrayList<String> unwantedPhrases = new ArrayList<String>();
 
-    private HashMap<String, Runnable> onStartRunnables = new HashMap<String, Runnable>();
     private HashMap<String, Runnable> onDoneRunnables = new HashMap<String, Runnable>();
     private HashMap<String, Runnable> onErrorRunnables = new HashMap<String, Runnable>();
+    private HashMap<String, Runnable> onStartRunnables = new HashMap<String, Runnable>();
+
 
     AudioManager.OnAudioFocusChangeListener audioFocusChangeListener = new AudioManager.OnAudioFocusChangeListener() {
         public void onAudioFocusChange(int focusChange) {
